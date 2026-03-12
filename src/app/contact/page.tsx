@@ -50,10 +50,10 @@ export default function ContactPage() {
   return (
     <div className="overflow-x-hidden pt-20">
       {/* SECTION 1: Split Hero */}
-      <section className="flex flex-col lg:flex-row min-h-[max(calc(100vh-80px),800px)]">
+      <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[max(calc(100vh-80px),800px)]">
         
-        {/* Left Column: Info */}
-        <div className="bg-[#0A0A0A] text-white/90 w-full lg:w-1/2 p-8 md:p-16 flex flex-col justify-center">
+        {/* 1. Intro Section */}
+        <div className="bg-[#0A0A0A] text-white/90 p-8 md:p-16 flex flex-col justify-center order-1 lg:col-start-1 lg:row-start-1">
           <div className="max-w-xl mx-auto lg:mx-0 lg:ml-auto w-full">
             <RevealOnScroll>
               <div className="mb-8">
@@ -68,52 +68,18 @@ export default function ContactPage() {
                 Whether it&apos;s a design role, a build project, a collaboration, or just a good conversation, I&apos;m open. I usually reply within 24 hours.
               </p>
 
-              <div className="inline-flex items-center gap-3 bg-[#1A1A1A] border border-white/5 rounded-full px-4 py-2 mb-16">
+              <div className="inline-flex items-center gap-3 bg-[#1A1A1A] border border-white/5 rounded-full px-4 py-2">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]" />
                 <span className="font-dm-mono text-green-500 text-xs uppercase tracking-wider">
                   Available for new opportunities
                 </span>
               </div>
             </RevealOnScroll>
-
-            <div className="flex flex-col border-t border-white/10">
-              {SOCIALS.map((social, idx) => (
-                <RevealOnScroll key={social.platform} delay={idx * 100}>
-                  <a
-                    href={social.url}
-                    target={social.url.startsWith("http") ? "_blank" : "_self"}
-                    rel={social.url.startsWith("http") ? "noopener noreferrer" : ""}
-                    className="group relative flex items-center justify-between py-6 border-b border-white/10 hover:border-white/0 transition-all duration-300 overflow-hidden"
-                  >
-                    {/* Hover Scale Border */}
-                    <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-rust scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 ease-out" />
-                    
-                    <div className="flex items-center gap-6 transform group-hover:translate-x-4 transition-transform duration-300 pl-2">
-                      <div className="text-xl opacity-80 group-hover:opacity-100 transition-opacity">
-                        {social.icon}
-                      </div>
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
-                        <span className="font-dm-mono text-xs uppercase tracking-widest font-bold">
-                          {social.platform}
-                        </span>
-                        <span className="font-playfair text-white/40 italic">
-                          {social.handle}
-                        </span>
-                      </div>
-                    </div>
-                    
-                    <div className="text-rust opacity-0 transform -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                      →
-                    </div>
-                  </a>
-                </RevealOnScroll>
-              ))}
-            </div>
           </div>
         </div>
 
-        {/* Right Column: Form */}
-        <div className="bg-[#000000] text-white/90 w-full lg:w-1/2 p-8 md:p-16 flex flex-col justify-center relative">
+        {/* 2. Form Section */}
+        <div className="bg-[#000000] text-white/90 p-8 md:p-16 flex flex-col justify-center relative order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2">
           <div className="max-w-xl mx-auto lg:mx-0 lg:mr-auto w-full">
               <RevealOnScroll>
                 <div className="mb-12">
@@ -201,6 +167,45 @@ export default function ContactPage() {
                   </div>
                 </form>
               </RevealOnScroll>
+          </div>
+        </div>
+
+        {/* 3. Links Section */}
+        <div className="bg-[#0A0A0A] text-white/90 p-8 md:p-16 flex flex-col justify-center order-3 lg:col-start-1 lg:row-start-2">
+          <div className="max-w-xl mx-auto lg:mx-0 lg:ml-auto w-full">
+            <div className="flex flex-col border-t border-white/10">
+              {SOCIALS.map((social, idx) => (
+                <RevealOnScroll key={social.platform} delay={idx * 100}>
+                  <a
+                    href={social.url}
+                    target={social.url.startsWith("http") ? "_blank" : "_self"}
+                    rel={social.url.startsWith("http") ? "noopener noreferrer" : ""}
+                    className="group relative flex items-center justify-between py-6 border-b border-white/10 hover:border-white/0 transition-all duration-300 overflow-hidden"
+                  >
+                    {/* Hover Scale Border */}
+                    <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-rust scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 ease-out" />
+                    
+                    <div className="flex items-center gap-6 transform group-hover:translate-x-4 transition-transform duration-300 pl-2">
+                      <div className="text-xl opacity-80 group-hover:opacity-100 transition-opacity">
+                        {social.icon}
+                      </div>
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+                        <span className="font-dm-mono text-xs uppercase tracking-widest font-bold">
+                          {social.platform}
+                        </span>
+                        <span className="font-playfair text-white/40 italic">
+                          {social.handle}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div className="text-rust opacity-0 transform -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                      →
+                    </div>
+                  </a>
+                </RevealOnScroll>
+              ))}
+            </div>
           </div>
         </div>
 
