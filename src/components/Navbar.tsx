@@ -25,17 +25,41 @@ export default function Navbar() {
     if (audioRef.current) {
       audioRef.current.volume = 0.2;
     }
-    const playAudio = async () => {
+
+    const startAudio = async () => {
+      if (!audioRef.current) return;
       try {
-        if (audioRef.current) {
-          await audioRef.current.play();
-          setIsPlaying(true);
-        }
+        await audioRef.current.play();
+        setIsPlaying(true);
+        removeInteractionListeners();
       } catch (err) {
-        setIsPlaying(false);
+        // Autoplay blocked, wait for interaction
+        console.log("Autoplay blocked, waiting for interaction");
       }
     };
-    playAudio();
+
+    const handleInteraction = () => {
+      startAudio();
+    };
+
+    const removeInteractionListeners = () => {
+      window.removeEventListener("click", handleInteraction);
+      window.removeEventListener("scroll", handleInteraction);
+      window.removeEventListener("keydown", handleInteraction);
+      window.removeEventListener("touchstart", handleInteraction);
+    };
+
+    window.addEventListener("click", handleInteraction);
+    window.addEventListener("scroll", handleInteraction);
+    window.addEventListener("keydown", handleInteraction);
+    window.addEventListener("touchstart", handleInteraction);
+
+    // Initial attempt
+    startAudio();
+
+    return () => {
+      removeInteractionListeners();
+    };
   }, []);
 
   const togglePlay = () => {
