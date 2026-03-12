@@ -98,6 +98,7 @@ export const WORK_PROJECTS = [
     desc: "A comprehensive push notification management system and analytics dashboard. Built to handle complex messaging architectures with an intuitive, minimalist UI. Currently driving engagement for early adopters.",
     tags: ["SaaS", "Dashboard", "Fintech"],
     url: "#",
+    coverImage: "/dCover.png",
     caseStudy: {
       problem: "Startups and early-stage companies often struggle to manage push notifications efficiently without building complex infrastructure from scratch. Existing solutions are either too expensive, bloated, or require significant engineering effort to implement standard messaging flows.",
       solution: "Dime is a minimalist, developer-friendly push notification management platform. It abstracts away the complexity of handling diverse messaging architectures, providing an intuitive dashboard to manage campaigns, trace message delivery, and analyze engagement metrics out of the box.",
@@ -112,6 +113,7 @@ export const WORK_PROJECTS = [
     desc: "Conversational UI for product specs.",
     tags: ["AI", "Mobile", "Safety"],
     url: "https://www.myspecai.com/",
+    coverImage: "/sCover.png",
     caseStudy: {
       problem: "Product details and specifications are often buried in dense, unreadable documentation. Users struggle to find exactly what they need, leading to churn and frustration.",
       solution: "Spec AI introduces a conversational interface for interrogating product documentation. By providing a natural language interface, it allows users to ask specific questions and receive immediate, precise answers.",
@@ -126,6 +128,7 @@ export const WORK_PROJECTS = [
     desc: "Automated generative AI content.",
     tags: ["AI", "Pet Tech", "Mobile"],
     url: "https://fuur.ai/",
+    coverImage: "/fCover.png",
     caseStudy: {
       problem: "Creating consistent, high-quality, and engaging digital content is resource-intensive and often lacks dynamic personalization.",
       solution: "Fuur AI utilizes generative models to automate customized content creation rapidly. The application features a sleek, mobile-optimized UI designed for immediate user gratification.",
@@ -140,6 +143,7 @@ export const WORK_PROJECTS = [
     desc: "Visitor management system.",
     tags: ["SaaS", "PropTech", "Real Estate"],
     url: "https://veesitor.com/",
+    coverImage: "/vCover.png",
     caseStudy: {
       problem: "Traditional visitor management relies on paper logs or clunky legacy software, failing to provide a seamless, secure, and modern experience for guests and facilities.",
       solution: "Veesitor modernizes the entry experience with a clean, intuitive web application designed for both administrators managing facilities and the guests signing in.",
@@ -154,6 +158,7 @@ export const WORK_PROJECTS = [
     desc: "Cloud storage solutions.",
     tags: ["Mobility", "Marketplace", "Mobility"],
     url: "https://www.nididrive.com/",
+    coverImage: "/nCover.png",
     caseStudy: {
       problem: "Users face challenges navigating complex interfaces when uploading, organizing, and retrieving files from the cloud, leading to disorganized digital spaces.",
       solution: "Nidi offers a streamlined cloud storage interface focused on visual clarity, drag-and-drop mechanics, and rapid retrieval.",
@@ -168,6 +173,7 @@ export const WORK_PROJECTS = [
     desc: "Educational technology platform.",
     tags: ["EdTech", "Web", "Edtech"],
     url: "https://www.trioedu.tech/",
+    coverImage: "/tCover.png",
   },
   {
     num: "07",
@@ -176,6 +182,7 @@ export const WORK_PROJECTS = [
     desc: "Corporate consulting agency web presence.",
     tags: ["Consulting", "Corporate", "Consulting"],
     url: "https://derryoaksconsulting.com/home/",
+    coverImage: "/deCover.png",
   },
   {
     num: "08",
