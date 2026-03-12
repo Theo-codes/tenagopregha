@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import SectionLabel from "@/components/SectionLabel";
@@ -66,7 +67,7 @@ export default function Home() {
 
             <RevealOnScroll delay={100}>
               <h1 className="font-playfair font-black text-[clamp(4rem,8vw,7rem)] leading-[0.9] text-white/90 tracking-tight mb-4">
-                Ten<span className="italic text-rust">a.</span>
+                Theophilus <span className="italic text-rust">Tena.</span> Gopregha
               </h1>
             </RevealOnScroll>
 
@@ -95,26 +96,47 @@ export default function Home() {
           </div>
 
           {/* Right Column (Hidden on Mobile) */}
-          <div className="hidden md:flex relative h-[500px] items-center justify-center">
-            {/* Animated Blob */}
-            <div className="absolute w-[80%] h-[80%] bg-gradient-to-tr from-rust/40 to-rust/30 mix-blend-multiply blur-xl animate-blob" />
+          <div className="hidden md:flex flex-col relative w-full items-center justify-center gap-8">
+            {/* Image Section */}
+            <div className="relative w-full h-[500px] flex items-center justify-center">
+              {/* Subtle Glow behind image */}
+              <div className="absolute w-[60%] h-[60%] bg-rust/20 blur-[100px] rounded-full animate-pulse" />
+              
+              {/* Hero Image Container */}
+              <RevealOnScroll delay={400} className="relative z-0 w-[80%] h-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out">
+                <div className="relative w-full h-full overflow-hidden border border-white/5 shadow-2xl">
+                  <Image
+                    src="/mypic.png"
+                    alt="Tena Gopregha"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
+                {/* Decorative Frame Element */}
+                <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-rust" />
+              </RevealOnScroll>
+            </div>
 
-            {/* Floating Cards */}
-            {FLOATING_CARDS.map((card, idx) => (
-              <div
-                key={idx}
-                className="absolute bg-[#1A1A1A] border border-white/10 px-6 py-4 shadow-[4px_4px_0_var(--rust)] animate-float"
-                style={{ top: card.top, right: card.right, animationDelay: card.delay }}
-              >
-                <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-rust animate-pulse" />
-                <p className="font-dm-mono text-[0.6rem] text-white/40 uppercase tracking-wider mb-1">
-                  {card.label}
-                </p>
-                <p className="font-playfair font-semibold text-white/90 text-lg whitespace-nowrap">
-                  {card.value}
-                </p>
+            {/* Horizontal Cards Section */}
+            <RevealOnScroll delay={600} className="w-full">
+              <div className="flex flex-row flex-wrap justify-center gap-6 z-10 px-4">
+                {FLOATING_CARDS.map((card, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-[#1A1A1A] border border-white/10 px-6 py-4 shadow-[4px_4px_0_var(--rust)] transition-transform hover:-translate-y-1 duration-300"
+                  >
+                    <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-rust animate-pulse" />
+                    <p className="font-dm-mono text-[0.6rem] text-white/40 uppercase tracking-wider mb-1">
+                      {card.label}
+                    </p>
+                    <p className="font-playfair font-semibold text-white/90 text-lg whitespace-nowrap">
+                      {card.value}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </RevealOnScroll>
           </div>
         </div>
 
