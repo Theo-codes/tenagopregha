@@ -65,7 +65,7 @@ export default function ContactPage() {
                 Say <span className="italic text-rust">hello.</span>
               </h1>
               <p className="font-playfair text-white/40 text-xl mb-12">
-                Whether it&apos;s a design role, a build project, a collaboration, or just a good conversation — I&apos;m open. I usually reply within 24 hours.
+                Whether it&apos;s a design role, a build project, a collaboration, or just a good conversation, I&apos;m open. I usually reply within 24 hours.
               </p>
 
               <div className="inline-flex items-center gap-3 bg-[#1A1A1A] border border-white/5 rounded-full px-4 py-2 mb-16">

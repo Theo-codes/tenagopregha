@@ -51,17 +51,17 @@ export const ABOUT_SKILLS = [
 
 export const EXPERIENCE = [
   {
-    year: "2024–Present",
+    year: "2024 Present",
     role: "Product Designer & Frontend Developer",
-    company: "Early-Stage Startup · Lagos, Nigeria",
+    company: "Early Stage Startup · Lagos, Nigeria",
   },
   {
-    year: "2023–Present",
+    year: "2023 Present",
     role: "Freelance Frontend Developer",
     company: "Client Projects · Remote",
   },
   {
-    year: "2019–2023",
+    year: "2019 2023",
     role: "B.Sc. Computer Science",
     company: "University · Nigeria",
   },
@@ -71,7 +71,7 @@ export const VALUES = [
   {
     num: "01",
     title: "Craft over shortcuts",
-    desc: "Details matter: pixel-perfect transitions, well-named variables, and thoughtful architecture over rushed delivery.",
+    desc: "Details matter: pixel perfect transitions, well named variables, and thoughtful architecture over rushed delivery.",
   },
   {
     num: "02",
@@ -100,10 +100,10 @@ export const WORK_PROJECTS = [
     url: "#",
     coverImage: "/dCover.png",
     caseStudy: {
-      problem: "Startups and early-stage companies often struggle to manage push notifications efficiently without building complex infrastructure from scratch. Existing solutions are either too expensive, bloated, or require significant engineering effort to implement standard messaging flows.",
-      solution: "Dime is a minimalist, developer-friendly push notification management platform. It abstracts away the complexity of handling diverse messaging architectures, providing an intuitive dashboard to manage campaigns, trace message delivery, and analyze engagement metrics out of the box.",
+      problem: "Startups and early stage companies often struggle to manage push notifications efficiently without building complex infrastructure from scratch. Existing solutions are either too expensive, bloated, or require significant engineering effort to implement standard messaging flows.",
+      solution: "Dime is a minimalist, developer friendly push notification management platform. It abstracts away the complexity of handling diverse messaging architectures, providing an intuitive dashboard to manage campaigns, trace message delivery, and analyze engagement metrics out of the box.",
       personas: ["Product Managers needing to execute rapid messaging campaigns without engineering bottlenecks.", "Frontend Engineers integrating push architecture into new apps without writing custom backend services."],
-      impact: "Currently driving higher user engagement for our early adopters, reducing the notification implementation timeline by up to 70% for new projects, and allowing non-technical teammates to orchestrate complex messaging logic natively.",
+      impact: "Currently driving higher user engagement for our early adopters, reducing the notification implementation timeline by up to 70% for new projects, and allowing non technical teammates to orchestrate complex messaging logic natively.",
     }
   },
   {
@@ -132,8 +132,8 @@ export const WORK_PROJECTS = [
     caseStudy: {
       problem: "Creating consistent, high-quality, and engaging digital content is resource-intensive and often lacks dynamic personalization.",
       solution: "Fuur AI utilizes generative models to automate customized content creation rapidly. The application features a sleek, mobile-optimized UI designed for immediate user gratification.",
-      personas: ["Content creators seeking rapid ideation and drafting tools.", "Marketing teams needing high-volume variations of targeted content."],
-      impact: "Significantly decreased time-to-publish for creators, enabling a higher volume of personalized content generation without sacrificing quality.",
+      personas: ["Content creators seeking rapid ideation and drafting tools.", "Marketing teams needing high volume variations of targeted content."],
+      impact: "Significantly decreased time to publish for creators, enabling a higher volume of personalized content generation without sacrificing quality.",
     }
   },
   {
@@ -147,8 +147,8 @@ export const WORK_PROJECTS = [
     caseStudy: {
       problem: "Traditional visitor management relies on paper logs or clunky legacy software, failing to provide a seamless, secure, and modern experience for guests and facilities.",
       solution: "Veesitor modernizes the entry experience with a clean, intuitive web application designed for both administrators managing facilities and the guests signing in.",
-      personas: ["Facility Managers needing secure, digital logs of building traffic.", "Visitors expecting a fast, frictionless check-in experience upon arrival."],
-      impact: "Modernized facility security, providing real-time visitor tracking and a premium first impression for arriving guests.",
+      personas: ["Facility Managers needing secure, digital logs of building traffic.", "Visitors expecting a fast, frictionless check in experience upon arrival."],
+      impact: "Modernized facility security, providing real time visitor tracking and a premium first impression for arriving guests.",
     }
   },
   {
@@ -162,7 +162,7 @@ export const WORK_PROJECTS = [
     caseStudy: {
       problem: "Users face challenges navigating complex interfaces when uploading, organizing, and retrieving files from the cloud, leading to disorganized digital spaces.",
       solution: "Nidi offers a streamlined cloud storage interface focused on visual clarity, drag-and-drop mechanics, and rapid retrieval.",
-      personas: ["Freelancers and creatives managing large volumes of visual assets.", "Remote teams needing straightforward, fast file-sharing capabilities."],
+      personas: ["Freelancers and creatives managing large volumes of visual assets.", "Remote teams needing straightforward, fast file sharing capabilities."],
       impact: "Improved user efficiency in file management tasks, driven by a highly responsive frontend and a simplified organizational model.",
     }
   },
@@ -219,7 +219,7 @@ export const PROCESS = [
   {
     num: "03",
     title: "Build",
-    desc: "I build what I design — personally. Next.js, Tailwind, Supabase. No handoff friction, no lost intent.",
+    desc: "I build what I design personally. Next.js, Tailwind, Supabase. No handoff friction, no lost intent.",
   },
   {
     num: "04",
@@ -231,7 +231,7 @@ export const PROCESS = [
 export const FAQS = [
   {
     question: "Are you available for freelance work?",
-    answer: "Yes — I take on select design and frontend projects alongside my primary role. I typically work on product design, UI/UX, and frontend builds. Get in touch and let's see if there's a fit.",
+    answer: "Yes I take on select design and frontend projects alongside my primary role. I typically work on product design, UI/UX, and frontend builds. Get in touch and let's see if there's a fit.",
   },
   {
     question: "What industries do you work in?",
@@ -243,6 +243,6 @@ export const FAQS = [
   },
   {
     question: "Do you do PM work, dev work, or both?",
-    answer: "My core is product design and frontend development — I design in Figma and build in Next.js. I bring product management thinking as a strategic layer, especially useful on early-stage products.",
+    answer: "My core is product design and frontend development I design in Figma and build in Next.js. I bring product management thinking as a strategic layer, especially useful on early stage products.",
   },
 ];

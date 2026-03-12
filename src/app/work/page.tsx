@@ -39,7 +39,7 @@ export default function WorkPage() {
           <div className="flex flex-col mt-8 md:mt-0">
             <RevealOnScroll delay={100}>
               <p className="font-playfair italic text-white/40 text-xl md:text-2xl mb-12 leading-snug">
-                Six projects across fintech, mobility, AI, proptech, and consulting — each one a distinct design challenge, a real client, and a shipped product.
+                Six projects across fintech, mobility, AI, proptech, and consulting, each one a distinct design challenge, a real client, and a shipped product.
               </p>
             </RevealOnScroll>
 

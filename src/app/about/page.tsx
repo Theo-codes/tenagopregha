@@ -73,7 +73,7 @@ export default function AboutPage() {
           <div className="flex flex-col mt-8 md:mt-0">
             <RevealOnScroll delay={100}>
               <p className="font-playfair italic text-white/40 text-xl md:text-2xl mb-8 leading-snug">
-                A Product Designer and frontend developer who believes the best interfaces are the ones that feel inevitable — like they couldn&apos;t have looked any other way.
+                A Product Designer and frontend developer who believes the best interfaces are the ones that feel inevitable, like they couldn&apos;t have looked any other way.
               </p>
             </RevealOnScroll>
             <RevealOnScroll delay={200}>
@@ -143,7 +143,7 @@ export default function AboutPage() {
                 </h3>
                 <div className="font-playfair text-white/40 text-lg leading-[1.8] space-y-6 max-w-2xl">
                   <p>
-                    My journey began with a curiosity about how complex systems work under the hood. Pursuing a B.Sc. in Computer Science gave me the foundational logic, but I quickly realized that writing code was only half the equation. I was drawn deeply into the visual and experiential side of software—how things look, feel, and ultimately earn trust.
+                    My journey began with a curiosity about how complex systems work under the hood. Pursuing a B.Sc. in Computer Science gave me the foundational logic, but I quickly realized that writing code was only half the equation. I was drawn deeply into the visual and experiential side of software, how things look, feel, and ultimately earn trust.
                   </p>
                   <p>
                     For me, design thinking came first. I learned to obsess over user flows and interfaces, visualizing solutions before typing any syntax. Code simply became the necessary tool to bring those designs to life exactly as intended, without compromise or loss of fidelity during handoff.
