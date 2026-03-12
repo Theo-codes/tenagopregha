@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --amber: #C2410C;
+  --rust: #C2410C;
+  --terracotta: #EA580C;
+  --sand: #FEF3C7;
+  --cream: #FFFBF5;
+  --dark: #1A0F00;
+  --mid: #3D1F00;
+  --muted: #92400E;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --color-amber: #C2410C;
+  --color-rust: #C2410C;
+  --color-terracotta: #EA580C;
+  --color-sand: #FEF3C7;
+  --color-cream: #FFFBF5;
+  --color-dark: #1A0F00;
+  --color-mid: #3D1F00;
+  --color-muted: #92400E;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-blob: blob 10s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes blob {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #0A0A0A;
+  color: #E5E5E5;
+  cursor: none;
 }
