@@ -50,10 +50,10 @@ export default function ContactPage() {
   return (
     <div className="overflow-x-hidden pt-20">
       {/* SECTION 1: Split Hero */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[max(calc(100vh-80px),800px)]">
+      <section className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[max(calc(100vh-80px),800px)]">
         
         {/* 1. Intro Section */}
-        <div className="bg-[#0A0A0A] text-white/90 p-8 md:p-16 flex flex-col justify-center order-1 lg:col-start-1 lg:row-start-1">
+        <div className="bg-[#0A0A0A] text-white/90 p-8 pt-20 md:p-16 flex flex-col lg:justify-center order-1 lg:col-start-1 lg:row-start-1">
           <div className="max-w-xl mx-auto lg:mx-0 lg:ml-auto w-full">
             <RevealOnScroll>
               <div className="mb-8">
@@ -79,7 +79,7 @@ export default function ContactPage() {
         </div>
 
         {/* 2. Form Section */}
-        <div className="bg-[#000000] text-white/90 p-8 md:p-16 flex flex-col justify-center relative order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2">
+        <div className="bg-[#000000] text-white/90 p-8 md:p-16 flex flex-col lg:justify-center relative order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2">
           <div className="max-w-xl mx-auto lg:mx-0 lg:mr-auto w-full">
               <RevealOnScroll>
                 <div className="mb-12">
@@ -171,7 +171,7 @@ export default function ContactPage() {
         </div>
 
         {/* 3. Links Section */}
-        <div className="bg-[#0A0A0A] text-white/90 p-8 md:p-16 flex flex-col justify-center order-3 lg:col-start-1 lg:row-start-2">
+        <div className="bg-[#0A0A0A] text-white/90 p-8 pt-0 pb-20 md:p-16 flex flex-col lg:justify-center order-3 lg:col-start-1 lg:row-start-2">
           <div className="max-w-xl mx-auto lg:mx-0 lg:ml-auto w-full">
             <div className="flex flex-col border-t border-white/10">
               {SOCIALS.map((social, idx) => (
