@@ -37,7 +37,8 @@ export default function ContactPage() {
         toast.success("Message sent successfully!");
         form.reset();
       } else {
-        toast.error("Failed to send message. Please try again.");
+        const errorData = await response.json().catch(() => ({}));
+        toast.error(errorData.error || "Failed to send message. Please try again.");
       }
     } catch (err) {
       toast.error("Something went wrong. Please try again or email me directly.");
