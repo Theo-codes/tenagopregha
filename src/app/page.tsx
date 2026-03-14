@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden">
       {/* SECTION 1: Hero */}
-      <section className="relative min-h-screen pt-24 pb-12 px-6 md:px-12 max-w-screen-2xl mx-auto flex flex-col justify-center">
+      <section className="relative min-h-screen pt-24 pb-12 px-6 md:px-12 max-w-[1400px] mx-auto flex flex-col justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
           <div className="flex flex-col items-start z-10 w-full">
@@ -101,7 +101,7 @@ export default function Home() {
             <div className="relative w-full h-[500px] flex items-center justify-center">
               {/* Subtle Glow behind image */}
               <div className="absolute w-[60%] h-[60%] bg-rust/20 blur-[100px] rounded-full animate-pulse" />
-              
+
               {/* Hero Image Container */}
               <RevealOnScroll delay={400} className="relative z-0 w-[80%] h-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out">
                 <div className="relative w-full h-full overflow-hidden border border-white/5 shadow-2xl">
@@ -151,7 +151,7 @@ export default function Home() {
 
       {/* SECTION 2: About */}
       <section id="about" className="bg-[#000000] text-white/90 py-24 px-6 md:px-12">
-        <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
           <div className="flex flex-col">
             <RevealOnScroll>
               <SectionLabel text="About me" light />
@@ -183,7 +183,7 @@ export default function Home() {
 
       {/* SECTION 3: Work Preview */}
       <section id="work" className="bg-[#0A0A0A] py-24 px-2 md:px-12">
-        <div className="max-w-screen-2xl mx-auto mb-16 px-4 md:px-0">
+        <div className="max-w-[1400px] mx-auto mb-16 px-4 md:px-0">
           <RevealOnScroll>
             <SectionLabel text="Featured work" />
             <h2 className="font-playfair font-black text-4xl md:text-6xl text-white/90 mt-6">
@@ -192,7 +192,7 @@ export default function Home() {
           </RevealOnScroll>
         </div>
 
-        <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-[2px] bg-white/5 border-y border-white/10">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-[2px] bg-white/5 border-y border-white/10">
           {PROJECTS.map((project, idx) => (
             <RevealOnScroll key={project.name} delay={idx * 50}>
               <Link
@@ -239,7 +239,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="max-w-screen-2xl mx-auto mt-16 px-4 md:px-0 flex justify-center">
+        <div className="max-w-[1400px] mx-auto mt-16 px-4 md:px-0 flex justify-center">
           <RevealOnScroll>
             <Link
               href="/work"
@@ -254,7 +254,7 @@ export default function Home() {
 
       {/* SECTION 4: Contact Preview */}
       <section id="contact" className="bg-[#050505] py-24 px-6 md:px-12 border-t border-white/10">
-        <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="flex flex-col">
             <RevealOnScroll>
               <SectionLabel text="Contact" />
