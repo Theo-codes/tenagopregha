@@ -39,18 +39,18 @@ export default function WorkPage() {
           <div className="flex flex-col mt-8 md:mt-0">
             <RevealOnScroll delay={100}>
               <p className="font-playfair italic text-white/40 text-xl md:text-2xl mb-12 leading-snug">
-                Six projects across fintech, mobility, AI, proptech, and consulting, each one a distinct design challenge, a real client, and a shipped product.
+                Ten projects across fintech, mobility, AI, proptech, consulting, and beyond — each one a distinct challenge, a real product, and something shipped to the world.
               </p>
             </RevealOnScroll>
 
             <RevealOnScroll delay={200}>
               <div className="flex flex-row flex-wrap gap-8 md:gap-12">
                 <div className="flex flex-col">
-                  <CountUp end={6} suffix="+" className="font-playfair font-bold text-rust text-[2.2rem] leading-none mb-2" />
+                  <CountUp end={10} suffix="+" className="font-playfair font-bold text-rust text-[2.2rem] leading-none mb-2" />
                   <span className="font-dm-mono text-white/40 text-xs uppercase tracking-widest">Projects shipped</span>
                 </div>
                 <div className="flex flex-col">
-                  <CountUp end={5} className="font-playfair font-bold text-rust text-[2.2rem] leading-none mb-2" />
+                  <CountUp end={6} className="font-playfair font-bold text-rust text-[2.2rem] leading-none mb-2" />
                   <span className="font-dm-mono text-white/40 text-xs uppercase tracking-widest">Industries</span>
                 </div>
                 <div className="flex flex-col">

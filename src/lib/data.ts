@@ -7,7 +7,7 @@ export const NAV_LINKS = [
 export const HOME_FLOATING_CARDS = [
   { label: "Role", value: "Product Designer & Developer", delay: "0ms", top: "10%", right: "20%" },
   { label: "Based in", value: "Lagos, Nigeria 🇳🇬", delay: "1500ms", top: "45%", right: "5%" },
-  { label: "Projects shipped", value: "6+ & counting", delay: "3000ms", top: "80%", right: "25%" },
+  { label: "Projects shipped", value: "8+ & counting", delay: "3000ms", top: "80%", right: "25%" },
 ];
 
 export const HOME_SKILLS = [
@@ -201,9 +201,27 @@ export const WORK_PROJECTS = [
       highFiImage: "/invessa_highfi.png",
     }
   },
+  {
+    num: "09",
+    slug: "blockshot",
+    title: "BlockShot",
+    desc: "A fast-paced browser game built and shipped solo. Dodge blocks, collect power-ups, and beat your high score; playable entirely in the browser with keyboard or mouse controls.",
+    tags: ["Game", "Web"],
+    url: "https://blockshot-game-oy5r.vercel.app/",
+    coverImage: "/blockshot.png",
+  },
+  {
+    num: "10",
+    slug: "social-battery",
+    title: "Social Battery Check",
+    desc: "A quick 10-question quiz that diagnoses how charged (or drained) your social energy really is and serves personalised advice at the end. Built with Figma Make and shipped live.",
+    tags: ["Wellness", "Tool"],
+    url: "https://garnet-cloudy-69578433.figma.site/",
+    coverImage: "/social-battery-calculator.png",
+  },
 ];
 
-export const WORK_FILTERS = ["All", "AI", "Fintech", "Mobility", "Real Estate", "Edtech", "Consulting"];
+export const WORK_FILTERS = ["All", "AI", "Fintech", "Mobility", "Real Estate", "Edtech", "Consulting", "Game", "Wellness"];
 
 export const PROCESS = [
   {
