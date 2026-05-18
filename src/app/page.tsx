@@ -118,39 +118,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 2: About */}
-      <section id="about" className="bg-[#0D0D0A] text-white py-24 px-6 md:px-12">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-          <div className="flex flex-col">
-            <RevealOnScroll>
-              <SectionLabel text="About me" />
-              <h2 className="font-barlow font-black text-4xl md:text-5xl uppercase leading-[0.9] tracking-[-0.01em] mt-6 mb-8">
-                Designer who builds. Developer who <span className="text-rust">thinks.</span>
-              </h2>
-            </RevealOnScroll>
-            <RevealOnScroll delay={100}>
-              <div className="font-dm-mono text-white/70 text-[0.9rem] leading-[1.7] space-y-6">
-                <p>
-                  I&apos;m a multidisciplinary creator passionate about building digital experiences that don&apos;t just function, but resonate. My background in UI/UX allows me to craft visual systems that earn trust, while my frontend engineering skills let me bring those designs to life without compromise.
-                </p>
-                <p>
-                  Whether I&apos;m mapping out user journeys in Figma or obsessing over the perfect CSS lerp animation in Next.js, I treat every pixel as an opportunity to delight. I bring a strategic product management lens to ensure what we build actually solves the right problems.
-                </p>
-              </div>
-            </RevealOnScroll>
-          </div>
-
-          <div className="flex flex-col justify-center mt-8 md:mt-0">
-            <RevealOnScroll delay={200}>
-              {SKILLS.map((skill) => (
-                <SkillBar key={skill.name} skill={skill} />
-              ))}
-            </RevealOnScroll>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3: Work Preview */}
+      {/* SECTION 2: Work Preview */}
       <section id="work" className="bg-[#141410] py-24 px-2 md:px-12">
         <div className="max-w-[1400px] mx-auto mb-16 px-4 md:px-0">
           <RevealOnScroll>
@@ -213,6 +181,38 @@ export default function Home() {
               <span className="transform transition-transform group-hover:translate-x-2">→</span>
             </Link>
           </RevealOnScroll>
+        </div>
+      </section>
+
+      {/* SECTION 3: About */}
+      <section id="about" className="bg-[#0D0D0A] text-white py-24 px-6 md:px-12">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+          <div className="flex flex-col">
+            <RevealOnScroll>
+              <SectionLabel text="About me" />
+              <h2 className="font-barlow font-black text-4xl md:text-5xl uppercase leading-[0.9] tracking-[-0.01em] mt-6 mb-8">
+                Designer who builds. Developer who <span className="text-rust">thinks.</span>
+              </h2>
+            </RevealOnScroll>
+            <RevealOnScroll delay={100}>
+              <div className="font-dm-mono text-white/70 text-[0.9rem] leading-[1.7] space-y-6">
+                <p>
+                  I&apos;m a multidisciplinary creator passionate about building digital experiences that don&apos;t just function, but resonate. My background in UI/UX allows me to craft visual systems that earn trust, while my frontend engineering skills let me bring those designs to life without compromise.
+                </p>
+                <p>
+                  Whether I&apos;m mapping out user journeys in Figma or obsessing over the perfect CSS lerp animation in Next.js, I treat every pixel as an opportunity to delight. I bring a strategic product management lens to ensure what we build actually solves the right problems.
+                </p>
+              </div>
+            </RevealOnScroll>
+          </div>
+
+          <div className="flex flex-col justify-center mt-8 md:mt-0">
+            <RevealOnScroll delay={200}>
+              {SKILLS.map((skill) => (
+                <SkillBar key={skill.name} skill={skill} />
+              ))}
+            </RevealOnScroll>
+          </div>
         </div>
       </section>
 
