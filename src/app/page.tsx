@@ -87,7 +87,7 @@ export default function Home() {
 
           <RevealOnScroll delay={200}>
             <p className="font-dm-mono text-base text-white/70 mb-12 max-w-[580px] leading-[1.75] text-center">
-              A multidisciplinary product designer and frontend engineer in Lagos. I bridge the gap between strategic thinking and pixel-perfect execution — building digital products that don&apos;t just look good, but solve real problems.
+              A multidisciplinary product designer and frontend engineer based in Lagos. I bridge the gap between strategic thinking and pixel-perfect execution — building digital products that don&apos;t just look good, but solve real problems.
             </p>
           </RevealOnScroll>
 
