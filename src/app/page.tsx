@@ -62,10 +62,10 @@ export default function Home() {
           <RevealOnScroll delay={100}>
             <h1 className="font-barlow font-black text-[clamp(4.375rem,11vw,9.875rem)] uppercase leading-[0.88] text-white tracking-[-0.02em] mb-8">
               <span className="group relative inline-block">
-                <span className="wavy-underline cursor-default">Better</span>
+                <span className="wavy-underline cursor-default">Clean</span>
                 <div className="absolute left-0 top-[105%] w-[300px] bg-[#F0EEE6] text-[#141410] p-6 z-50 text-left opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-2xl">
                   <p className="font-dm-mono text-[0.6rem] uppercase tracking-[0.3em] text-rust mb-4">
-                    What does Better mean?
+                    What does Clean mean?
                   </p>
                   <ul className="space-y-2.5">
                     {[
