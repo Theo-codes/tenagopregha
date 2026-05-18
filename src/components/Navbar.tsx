@@ -22,44 +22,49 @@ export default function Navbar() {
   }, [isOpen]);
 
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = 0.2;
-    }
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.volume = 0.2;
 
-    const startAudio = async () => {
-      if (!audioRef.current) return;
-      try {
-        await audioRef.current.play();
+    let started = false;
+
+    const play = () => {
+      if (started) return;
+      audio.play().then(() => {
+        started = true;
         setIsPlaying(true);
-        removeInteractionListeners();
-      } catch (err) {
-        // Autoplay blocked, wait for interaction
-        console.log("Autoplay blocked, waiting for interaction");
-      }
+        removeAll();
+      }).catch(() => {
+        // Still blocked — will retry on next trusted gesture
+      });
     };
 
-    const handleInteraction = () => {
-      startAudio();
+    // scroll is not a trusted gesture in Chrome, so defer play() out of
+    // the scroll handler. Once the document has any activation, this works.
+    const onScroll = () => setTimeout(play, 0);
+
+    // click / keydown / touchend ARE trusted gestures — play immediately.
+    // If the user scrolled first and it failed, this catches the next tap/click.
+    const onTrusted = () => play();
+
+    const removeAll = () => {
+      window.removeEventListener("scroll", onScroll);
+      document.removeEventListener("scroll", onScroll);
+      window.removeEventListener("click", onTrusted);
+      window.removeEventListener("keydown", onTrusted);
+      window.removeEventListener("touchend", onTrusted);
     };
 
-    const removeInteractionListeners = () => {
-      window.removeEventListener("click", handleInteraction);
-      window.removeEventListener("scroll", handleInteraction);
-      window.removeEventListener("keydown", handleInteraction);
-      window.removeEventListener("touchstart", handleInteraction);
-    };
+    // Try immediate autoplay (works after the site is in browser's MEI)
+    play();
 
-    window.addEventListener("click", handleInteraction);
-    window.addEventListener("scroll", handleInteraction);
-    window.addEventListener("keydown", handleInteraction);
-    window.addEventListener("touchstart", handleInteraction);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    document.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("click", onTrusted);
+    window.addEventListener("keydown", onTrusted);
+    window.addEventListener("touchend", onTrusted, { passive: true });
 
-    // Initial attempt
-    startAudio();
-
-    return () => {
-      removeInteractionListeners();
-    };
+    return removeAll;
   }, []);
 
   const togglePlay = () => {
@@ -96,7 +101,7 @@ export default function Navbar() {
       <nav className={`fixed top-0 left-0 w-full z-[100] transition-colors duration-300 ${navClasses}`}>
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className={`font-playfair font-black text-2xl tracking-tighter transition-colors ${logoClasses}`}>
+          <Link href="/" className={`font-barlow font-black text-xl uppercase tracking-wide transition-colors ${logoClasses}`}>
             Tena.
           </Link>
 

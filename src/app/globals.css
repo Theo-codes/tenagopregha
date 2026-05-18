@@ -1,25 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --amber: #C2410C;
-  --rust: #C2410C;
-  --terracotta: #EA580C;
-  --sand: #FEF3C7;
-  --cream: #FFFBF5;
-  --dark: #1A0F00;
-  --mid: #3D1F00;
-  --muted: #92400E;
+  --red: #E84030;
+  --rust: #E84030;
+  --terracotta: #FF5A40;
+  --sand: #F0EEE6;
+  --cream: #F0EEE6;
+  --dark: #141410;
+  --mid: #2A2A20;
+  --muted: #888880;
 }
 
 @theme {
-  --color-amber: #C2410C;
-  --color-rust: #C2410C;
-  --color-terracotta: #EA580C;
-  --color-sand: #FEF3C7;
-  --color-cream: #FFFBF5;
-  --color-dark: #1A0F00;
-  --color-mid: #3D1F00;
-  --color-muted: #92400E;
+  --color-red: #E84030;
+  --color-rust: #E84030;
+  --color-terracotta: #FF5A40;
+  --color-sand: #F0EEE6;
+  --color-cream: #F0EEE6;
+  --color-dark: #141410;
+  --color-mid: #2A2A20;
+  --color-muted: #888880;
+
+  --font-barlow: var(--font-barlow);
+  --font-dm-mono: var(--font-dm-mono);
 
   --animate-blob: blob 10s ease-in-out infinite;
   --animate-float: float 6s ease-in-out infinite;
@@ -37,7 +40,18 @@
 }
 
 body {
-  background: #0A0A0A;
-  color: #E5E5E5;
+  background: #141410;
+  color: #FFFFFF;
   cursor: none;
+}
+
+.wavy-underline {
+  text-decoration: underline wavy var(--rust);
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
+}
+
+@keyframes cursor-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
